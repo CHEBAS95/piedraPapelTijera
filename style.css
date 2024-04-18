@@ -1,0 +1,41 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: aqua;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h2{
+    text-align: center;
+
+}
+
+.seccion1{
+    margin: 0 auto;
+    background-color: blue;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.game{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center ;
+
+}
+#result{
+    height: 25%;
+}
+.seccion2{
+    padding: 10px;
+    margin: 0 auto;
+
+
+}
+img{
+    width: 250px;
+    height: 250px;
+}
