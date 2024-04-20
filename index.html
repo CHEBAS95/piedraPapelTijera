@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>piedra ,papel o tijera</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>piedra ,papel o tijera</title>
 </head>
+
 <body>
-    <div class="container-fluid seccion1">
-        <h2>piedra papel o tijera </h2>
-        <p class="text-center">proximamente <small>contra la maquina</small></p>
-        <section>
-            <input type="checkbox" name="theme" id="theme">
-            <label for="theme">tema de color</label>
-        </section>
+  <div class="container-fluid seccion1">
+    <h2>piedra papel o tijera </h2>
+    <p class="text-center">proximamente <small>contra la maquina</small></p>
+    <section>
+      <input type="checkbox" name="theme" id="theme">
+      <label for="theme">tema de color</label>
+    </section>
+  </div>
+  <div class="container-fluid seccion2 " style="background-color:red;">
+    <div class="row game" style="background-color: blueviolet;">
+      <div class="col">
+        <button type="button" id="rock">
+          <img src="img/roca.png" alt="piedra">
+        </button>
+        <button type="button" id="paper">
+          <img src="img/papel.png" alt="palpel">
+        </button>
+        <button type="button" id="excisor">
+          <img src="img/tijeras.png" alt="tijera">
+        </button>
+      </div>
+      <div id="result">
+        <h3 class="win d-none"></h3>
+        
+      </div>
+      <div class="col" style="background-color: aquamarine;">
+        jugadores
+      </div>
     </div>
-    <div class="container-fluid seccion2 " style="background-color:red;">
-        <div class="row game" style="background-color: blueviolet;">
-            <div class="col">
-                <button type="button" id="rock">
-                    <img src="img/roca.png" alt="piedra">
-                </button>
-                <button type="button" id="paper">
-                    <img src="img/papel.png" alt="palpel">
-                </button>
-                <button type="button" id="excisor">
-                    <img src="img/tijeras.png" alt="tijera">
-                </button>
-            </div>
-            <div id="result">
-                resultado
-            </div>
-            <div class="col" style="background-color: aquamarine;">
-                jugadores
-            </div>
-        </div>
 
-    </div>
+  </div>
 
-    <script src="main.js"></script>
+  <script src="main.js"></script>
 </body>
+
 </html>
