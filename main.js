@@ -32,34 +32,42 @@ function selectUser(select) {
 }
 
 /*--TRABJAR EN SET INETEAVAL Y SET TIME OT*/
-setTimeout(() => selectComp(), 5000);
 function selectComp() {
   const compSelection = Math.floor(Math.random() * 3) + 1;
   // Cambiar la imagen de la computadora después de 2 segundos
-  setTimeout(() => changeImageComp(selectComp), 5000);
-  changeImageComp(compSelection);
+  setTimeout(() => {
+    changeImageComp(compSelection);
+  }, 2000);
+  
   console.log(compSelection);
   return compSelection;
 }
+/*--------FUNCION DE MESAGE RESULTADO DEL JUEGO -----------*/
+function mesagge (exp){
+  setTimeout(() => {
+  winLose.innerHTML=exp}, 2000); 
+}
+
+
 
 function play(selectUser, selectComp) {
   if (selectUser === selectComp) {
     console.log("Empate");
-    winLose.innerHTML = tie;
+    mesagge(tie);
   } else if (
     (selectUser === ROCK && selectComp === EXCISOR) ||
     (selectUser === PAPER && selectComp === ROCK) ||
     (selectUser === EXCISOR && selectComp === PAPER)
   ) {
     console.log("¡Ganaste!");
-    winLose.innerHTML = win;
+    mesagge(win);
   } else if (
     (selectUser === ROCK && selectComp === PAPER) ||
     (selectUser === PAPER && selectComp === EXCISOR) ||
     (selectUser === EXCISOR && selectComp === ROCK)
   ) {
     console.log("¡Perdiste!");
-    winLose.innerHTML = lose;
+    mesagge(lose);
   } else {
     console.log("Juego nulo");
   }
